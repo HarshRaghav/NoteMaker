@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:layout_margin="12dp">
+
+    <TextView
+        android:id="@+id/saved_text"
+        android:padding="12dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/del"
+        android:textColor="@color/white"
+        tools:text="written"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/saved_text"
+        app:layout_constraintTop_toTopOf="@id/saved_text"
+        app:layout_constraintRight_toLeftOf="@id/del"
+        android:src="@drawable/ic_baseline_edit_note_24"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/del"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/saved_text"
+        app:layout_constraintTop_toTopOf="@id/saved_text"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/ic_baseline_delete_outline_24"
+        />
+    <EditText
+        android:id="@+id/changes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saved_text"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:hint="make changes here"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_changes"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/changes"
+        app:layout_constraintTop_toTopOf="@id/changes"
+        app:layout_constraintEnd_toEndOf="@id/changes"
+        app:layout_constraintLeft_toRightOf="@id/changes"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/ic_baseline_save_24"
+        android:visibility="gone"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
